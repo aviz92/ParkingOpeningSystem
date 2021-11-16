@@ -18,7 +18,7 @@ This web application creates a very basic Parking Opening System site using Djan
 
 ## Setup
 
-To run this app, you will need to follow these 4 steps:
+To run this app, you will need to follow these 5 steps:
 
 1. Clone This Project (Make Sure You Have Git Installed)
 ```
