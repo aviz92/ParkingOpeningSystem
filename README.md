@@ -8,7 +8,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-## General info:
+## General-info:
 
 This ParkingOpeningSystem web application project is made with Django and open-cv as the backend.
 
