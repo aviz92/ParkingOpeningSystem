@@ -1,146 +1,50 @@
-# EZLife_Web_Project
-# - Automation_Infrastructure-2.0.69-py2.py3-none-any.whl
-# - Automation-Infrastructure @ http://asil-sv-au1/Repository/Automation_Infrastructure-2.0.69-py2.py3-none-any.whl
-# - python-ldap @ http://asil-sv-au1/Repository/python_ldap-3.3.1-cp38-cp38-win_amd64.whl
-
-
+# ParkingOpeningSystem
 
 ------------------------------------------------------------------------------------------------------------------------
 
-General:
-========
-
-Create requirements.txt:
-----------------------------
-- pip freeze > requirements.txt
-
-
-Install requirements.txt:
-----------------------------
-- pip install -r requirements.txt
-
-
-Uninstall requirements.txt:
-----------------------------
-- pip uninstall -r requirements.txt -y
-
-
-Upgrade pip:
-------------
-- pip install pip --upgrade
-
-
-Create wheel:
--------------
-install .whl:
-- pip install wheel
-
-create .whl: 
-- python setup.py sdist bdist_wheel (the file will be under dist - 2 file)
-
-load .whl: 
-- pip install http:path_to_file_name/wheel_file_name.whl
-- pip install http://asil-sv-au1/Repository/Automation_Infrastructure-2.0.59-py2.py3-none-any.whl
-
-remove .whl:
-- pip uninstall Automation_Infrastructure
-
-
-General wheel install/uninstall:
----------------------------
-jira (version 3.0.0):
-- pip install git+git://github.com/pycontribs/jira.git@7fa3a454c08a14e2d7d7670fcfa87482e16936ba
-
-Automation_Infrastructure:
-- pip install http://asil-sv-au1/Repository/Automation_Infrastructure-2.0.59-py2.py3-none-any.whl
-- pip uninstall Automation_Infrastructure
-
-RobotFrameworkSVGInfra:
-- pip install http://asil-sv-au1/Repository/RobotFrameworkSVGInfra-1.1.1-py3-none-any.whl
-- pip uninstall RobotFrameworkSVGInfra
-
-SwEngineTime:
-- pip install http://asil-sv-au1/Repository/SwEngineTime-1.0.2-py3-none-any.whl
-- pip uninstall SwEngineTime
-
-
+## Table of contents
+* [General info](#General-info)
+* [Setup](#Setup)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Django:
-=======
+## General info:
 
-Run Server:
------------
-from console:
-- python manage.py runserver
+This ParkingOpeningSystem web application project is made with Django and open-cv as the backend.
 
-from pycharm (edit configuration):
-- runserver ip_address:port
-- runserver host_name:port
-- runserver asil-azaguri:8000
-
-
-Create super user:
-------------------
-- python manage.py createsuperuser --email spuser@example.com --username spuser
-
-
-Create makemigrations:
-----------------------
-- python manage.py makemigrations
-- python manage.py migrate
-
-makemigrations for all apps (must on postgresql):
-- 
-python manage.py makemigrations ACPApp AmarisoftUEApp ChipsetApp CUCPApp CustomerNameApp CUUPApp DeviceTypeApp DUApp GnodeBApp HardwareElementApp HardwareTypeApp ImageTypeApp InfoLinksApp InfoCategoriesApp IperfApp KMasterApp NucApp RackSwitchApp RUApp ScenarioApp SerialTerminalApp SetupApp SiteApp SnmpAPP SourceTargetApp SRVersionApp SwitchVendorTypeApp TestApp TreeApp TreeMinimalApp UeApp UeStaticDynamicApp UeVendorNameApp
-
-
-Create project:
----------------
-- django-admin startproject my_project_name
-
-
-Create application:
--------------------
-- django-admin startapp my_app_name
-
-
-Schema:
--------
-Schema configurations:
-- INSTALLED_APPS = (
-    ...
-    'django_extensions',
-    ...
-)
-
-Create Schema:
-- python manage.py graph_models -a -o myapp_models.png
-- python manage.py graph_models -a -o EZLife-NG_Schema.png
-
-
-How to install LDAP:
---------------------
-- install openldap-2.4.54 (have on \\asil-sv-au1\c$\inetpub\wwwroot\Repository\openldap-2.4.54)
-- pip install django-auth-ldap
-- pip install http://asil-sv-au1/Repository/python_ldap-3.3.1-cp38-cp38-win_amd64.whl
-
-
+This web application creates a very basic Parking Opening System site using Django. The site allows authors to create full apartment owners using the Admin site, and decide whether the gate will open for the tenant’s vehicle number (based on open-cv).
 
 ------------------------------------------------------------------------------------------------------------------------
 
-LDAP:
-=====
+## Setup
 
-LDAP from terminal:
------------------
+To run this app, you will need to follow these 4 steps:
 
-ldapobj = ldap.initialize("ldap://IPAddress:PORT")
-ldapobj.simple_bind_s(user, password)
+1. Clone This Project (Make Sure You Have Git Installed)
+```
+https://github.com/aviz92/ParkingOpeningSystem.git
+```
 
-ldapobj.search_s("OU=Israel,OU=UsersAirspan,DC=airspan,DC=com", ldap.SCOPE_SUBTREE, "(objectClass=user)")
+2. Install Dependencies
+```
+pip install -r requirements.txt
+```
 
+3. Set Database (Make Sure you are in directory same as manage.py)
+```
+python manage.py makemigrations
+python manage.py migrate
+```
 
+4. Create Superuser 
+```
+python manage.py createsuperuser
+```
 
+5. After all these steps , you can start testing and developing this project. 
+```
+python manage.py runserver
+```
+
+#### That's it! Happy Coding!
 ------------------------------------------------------------------------------------------------------------------------
