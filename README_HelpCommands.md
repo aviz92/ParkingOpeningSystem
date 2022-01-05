@@ -90,6 +90,17 @@ Create Schema:
 - python manage.py graph_models -a -o Project_Schema.png
 
 
+How make and load backup:
+--------------------
+- .\venv\Scripts\activate
+
+How make backup:
+- python manage.py dumpdata --natural-foreign --exclude=auth.permission --exclude=contenttypes --indent=4 > db.json
+
+How load backup:
+- python manage.py loaddata db.json
+
+
 ------------------------------------------------------------------------------------------------------------------------
 
 LDAP:
