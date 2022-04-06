@@ -41,6 +41,6 @@ if __name__ == '__main__':
     ROOT_PATH = f'{os.path.realpath(os.path.join(os.path.dirname(__file__)))}'
     # print(f'\n\nThe root path is: {ROOT_PATH}')
 
-    NOT_SEARCH_FOLDERS = ['EZLife_Web_Project', 'EZLife_Web_Project_dev', 'venv', '.run', '.git', '.idea']
+    NOT_SEARCH_FOLDERS = ['ProjectName', 'venv', '.run', '.git', '.idea']
 
     main(ROOT_PATH, NOT_SEARCH_FOLDERS)
