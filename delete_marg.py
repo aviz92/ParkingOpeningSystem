@@ -38,6 +38,6 @@ def main(root_path, not_deleted_files, not_deleted_folders):
 if __name__ == '__main__':
     ROOT_PATH = f'{os.path.realpath(os.path.join(os.path.dirname(__file__)))}'
     NOT_DELETED_FILES = ['__init__', '__init__.py', '0001_initial.py']
-    NOT_DELETED_FOLDERS = ['EZLife_Web_Project', 'EZLife_Web_Project_Dev', 'venv', '.run', '.git', '.idea']
+    NOT_DELETED_FOLDERS = ['ProjectName', 'venv', '.run', '.git', '.idea']
 
     main(ROOT_PATH, NOT_DELETED_FILES, NOT_DELETED_FOLDERS)
