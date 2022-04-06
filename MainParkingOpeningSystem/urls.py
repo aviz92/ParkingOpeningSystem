@@ -38,6 +38,7 @@ urlpatterns = [
     path('ParkingNumberApp/', include('ParkingNumberApp.urls')),
     path('CarNumberApp/', include('CarNumberApp.urls')),
     path('MotorcycleNumberApp/', include('MotorcycleNumberApp.urls')),
+    path('TreeApp/', include('TreeApp.urls')),
 
     path('schema/', schema_view),
     path('docs/', include_docs_urls(title='Bookings API')),
