@@ -1,5 +1,5 @@
-echo Install Infrastructure:
-pip uninstall -y Infrastructure
+echo Install PrivateInfrastructure:
+pip uninstall -y PrivateInfrastructure
 pip install -r requirements.txt
 
 echo Install LDAP:
