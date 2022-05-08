@@ -2,8 +2,8 @@ import os
 from datetime import datetime, timezone
 import time
 
-from Infrastructure.Logger_Infrastructure.Projects_Logger import ProjectsLogging
-from Infrastructure.Git_Infrastructure.GitAction_Infrastructure import GitActions
+from PrivateInfrastructure.Logger_Infrastructure.Projects_Logger import ProjectsLogging
+from PrivateInfrastructure.Git_Infrastructure.GitAction_Infrastructure import GitActions
 
 
 def create_database_backup():
